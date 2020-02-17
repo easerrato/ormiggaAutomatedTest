@@ -1,7 +1,6 @@
 package com.ormigga.automation.basepage;
 
-import com.ormigga.automation.infrastructure.driver.Setup;
-import com.ormigga.automation.infrastructure.driver.Wait;
+import com.ormigga.automation.infrastructure.driver.*;
 import org.openqa.selenium.WebDriver;
 
 public class BasePage {
