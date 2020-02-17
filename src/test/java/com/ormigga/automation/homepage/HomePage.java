@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     private static final String HOME_PAGE_URL = "https://www.google.";
 
@@ -23,7 +23,7 @@ public class HomePage extends BasePage{
         PageFactory.initElements(dv, this);
     }
 
-    void goToHomePage(String country){
+    void goToHomePage(String country) {
         dv.get(HOME_PAGE_URL + country);
         wait.forLoading(5);
     }

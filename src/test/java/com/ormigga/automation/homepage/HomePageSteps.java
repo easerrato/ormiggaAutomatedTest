@@ -14,23 +14,28 @@ public class HomePageSteps {
         this.homePage = new HomePage();
     }
 
-    @Given("^A user navigates to HomePage \"([^\"]*)\"$") public void aUserNavigatesToHomePage(String country) {
+    @Given("^A user navigates to HomePage \"([^\"]*)\"$")
+    public void aUserNavigatesToHomePage(String country) {
         this.homePage.goToHomePage(country);
     }
 
-    @Then("^Google logo is displayed$") public void googleLogoIsDisplayed() {
+    @Then("^Google logo is displayed$")
+    public void googleLogoIsDisplayed() {
         this.homePage.checkLogoDisplay();
     }
 
-    @And("^search bar is displayed$") public void searchBarIsDisplayed() {
+    @And("^search bar is displayed$")
+    public void searchBarIsDisplayed() {
         this.homePage.checkSearchBarDisplay();
     }
 
-    @Then("^page title is \"([^\"]*)\"$") public void pageTitleIs(String title) {
+    @Then("^page title is \"([^\"]*)\"$")
+    public void pageTitleIs(String title) {
         this.homePage.checkTitle(title);
     }
 
-    @When("^a user searches for \"([^\"]*)\"$") public void aUserSearchesFor(String searchValue) {
+    @When("^a user searches for \"([^\"]*)\"$")
+    public void aUserSearchesFor(String searchValue) {
         this.homePage.searchFor(searchValue);
     }
 }

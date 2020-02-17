@@ -6,7 +6,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.Assert.assertTrue;
 
@@ -17,6 +16,7 @@ public class RegisterPageSteps extends BasePage {
         dv.get(url);
         Thread.sleep(5000);
     }
+
     @And("we click on the link button {string}")
     public void weClickOnTheLinkButtonLinkButton(String linkButton) throws InterruptedException {
         dv.findElement(By.linkText(linkButton)).click();

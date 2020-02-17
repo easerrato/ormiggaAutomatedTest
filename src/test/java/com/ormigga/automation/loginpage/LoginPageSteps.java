@@ -1,15 +1,10 @@
 package com.ormigga.automation.loginpage;
 
 import com.ormigga.automation.basepage.BasePage;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.By;
 
 import static org.junit.Assert.assertTrue;
 
@@ -42,13 +37,13 @@ public class LoginPageSteps extends BasePage {
     @Then("we receive a message containing an {string}")
     public void weReceiveAMessageContainingAn(String message) {
 
-        if(message == "El correo o la contraseña no es válida, intenta nuevamente..."){
+        if (message == "El correo o la contraseña no es válida, intenta nuevamente...") {
             String actualString = dv.findElement(By.xpath("//*[@id=\"mat-dialog-1\"]/app-alert-warning/div[1]/div[2]/p")).getText();
 
             String expectedString = message;
 
             assertTrue(actualString.contains(expectedString));
-        }else {
+        } else {
             if (message == "TAREAS QUE REQUIEREN TU ATENCIÓN") {
                 String actualString = dv.findElement(By.xpath("/html/body/app-root/app-dash/mat-sidenav-container/mat-sidenav-content/app-dash-usuario/div/div[1]/h1")).getText();
 
